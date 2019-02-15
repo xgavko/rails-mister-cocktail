@@ -1,2 +1,7 @@
-<h1>Doses#add</h1>
-<p>Find me in app/views/doses/add.html.erb</p>
+<h1>Add ingredient for <%= @cocktail.name %></h1>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.association :ingredient, input_html: { class: "beautiful-dropdown"},
+  include_hidden: false %>
+  <%= f.input :description %>
+  <%= f.button :submit, class: 'btn btn-danger'%>
+<% end %>
