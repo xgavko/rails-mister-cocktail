@@ -14,7 +14,13 @@
 @import "components/index";
 @import "pages/index";
 
-body h1{
+body h1 {
   font-size: 28px;
+  color: grey;
+}
+
+body h2{
+  color: grey;
+  font-size: 23px;
 }
 

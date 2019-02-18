@@ -3,7 +3,7 @@
   <div class="content-inner">
     <div class="entry-content cocktail-content-wrapper">
       <div class="cocktail-single-photo">
-        <img src=<%= asset_url('cocktail-card2.jpg') %> alt="">
+        <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
       </div>
       <div class="cocktail-specs-wrapper">
         <div class="cocktail-description">
@@ -14,7 +14,7 @@
           <ul class="ingredients-list">
             <% @doses.each do |dose| %>
             <li>
-              <%=  dose.ingredient.name%> <%= dose.description %> <%= link_to "Delete", dose_path(dose.id) %>
+              <%=  dose.ingredient.name%> <%= dose.description %> <%= link_to "Delete", dose_path(dose.id), method: :delete %>
             </li>
             <% end %>
           </ul>

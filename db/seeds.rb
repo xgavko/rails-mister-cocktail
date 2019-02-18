@@ -5,7 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Dose.destroy_all
 Ingredient.destroy_all
+
 puts 'creating ingredients'
 
 Ingredient.create(name: "lemon")
@@ -46,37 +48,9 @@ puts "All the ingredients imported"
 Cocktail.destroy_all
 puts 'Creating cocktails'
 
-cocktails_attributes = [
-  {
-    name: "Martini",
-  },
-  {
-    name: "Gin tonic",
-  },
-  {
-    name: "Blizzard vert",
-  },
-  {
-    name: "Cosmopolitain",
-  },
-  {
-    name: "Cuba libre",
-  },
-  {
-    name: "Prince Igor",
-  },
-  {
-    name: "Blizzard rouge",
-  },
-  {
-    name: "DCComics",
-  },
-  {
-    name: "Ironman",
-  },
-  {
-    name: "Dance on the beach",
-  }
-]
-Cocktail.create!(cocktails_attributes)
+url = "https://images.pexels.com/photos/842955/pexels-photo-842955.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+cocktail = Cocktail.new(name: "Red cocktail")
+cocktail.remote_photo_url = url
+cocktail.save
+
 puts 'Finished!'

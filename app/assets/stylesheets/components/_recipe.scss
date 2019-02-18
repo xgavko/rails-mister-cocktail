@@ -1,6 +1,7 @@
 .content-block{
   h2{
     font-size: 20px;
+    color: grey;
   }
 }
 .content-inner{
@@ -8,38 +9,40 @@
   border: solid 1px;
   border-color: pink;
   margin: 20px;
+  border-radius: 3px;
 }
 
 
 .cocktail-content-wrapper{
   position: relative;
-  width: 100vw;
-  height: 100vh;
+
 }
 
 .cocktail-single-photo {
   img {
-    position: absolute;
-    top: 0;
-    left: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
     height: auto;
-    max-width: 40%;
+    max-width: 50%;
     width: 50%;
     width: auto;
     resize: both;
     overflow: auto;
+    border-radius: 3px;
   }
 }
 
 .cocktail-specs-wrapper {
   position: absolute;
-  top: 0;
-  right: 0;
+  border-radius: 3px;
+  box-shadow: 3px 3px 25px 6px rgba(0, 0, 0, 0.1);
+  top: 37px;
+  right: 16%;
   text-align: left;
   margin: auto;
   display: block;
-  width: 60%;
+  width: 55%;
   padding: 20px;
+  background-color: white;
 }
 
 
